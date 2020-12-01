@@ -7,7 +7,7 @@ export const Layout: React.FunctionComponent<ILayout.IProps> = ({
 }) => {
   return (
     <div
-      className={`${style.layout} w-screen h-screen flex flex-col items-center relative`}
+      className={`${style.layout} w-screen min-h-screen flex flex-col items-center relative`}
     >
       <div className="mt-8 mb-32 z-10">
         <img src="/logo.svg" />
