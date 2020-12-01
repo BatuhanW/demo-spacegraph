@@ -24,43 +24,13 @@ export default function Missions() {
   const { data, loading, error } = useQuery(GET_LAUNCHES);
 
   useEffect(() => {
-    if (data) console.log('data:', data);
-  }, [data]);
-
-  useEffect(() => {
-    if (loading) console.log('loading...');
-  }, [loading]);
-
-  useEffect(() => {
     if (error) console.error(error);
   }, [error]);
 
   return (
     <Layout>
       <div className="w-full flex justify-center">
-        {/* {data && (
-          <div className="flex flex-col border rounded">
-            <div className={`${style.tableHeader} grid grid-cols-5 gap-10`}>
-              <div>NAME</div>
-              <div>DESCRIPTION</div>
-              <div>LOCATION</div>
-              <div>YEAR</div>
-              <div />
-            </div>
-            {data.launches.map((launch: IMissions.launch) => {
-              
-              return (
-                <div className="grid grid-cols-5 gap-10">
-                  
-                  <div className="truncate"></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              );
-            })}
-          </div>
-        )} */}
+        {loading && 'Loading...'}
         {data && (
           <div className="flex flex-col">
             <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
