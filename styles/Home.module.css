@@ -1,9 +1,3 @@
-.homeImage {
-  position: absolute;
-  overflow: hidden;
-  right: 0;
-}
-
 .overlay {
   position: absolute;
   background-color: #f7fafc;
@@ -12,12 +6,4 @@
   transform: rotate(20deg);
   top: -20vh;
   left: -25vh;
-}
-
-.imageWrapper {
-  height: 100vh;
-}
-
-.image {
-  height: 100%;
 }

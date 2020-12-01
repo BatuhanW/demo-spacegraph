@@ -1,0 +1,21 @@
+.button {
+  border: 1px solid #1b262c;
+  border-radius: 2px;
+  opacity: 0.5;
+  color: #1b262c;
+  padding: 6px 16px;
+  font-size: 16px;
+}
+
+.button:hover {
+  border: 1px solid #354147;
+  background-color: #354147;
+  color: white;
+  opacity: 1;
+}
+
+.button:active {
+  background-color: #1b262c;
+  color: white;
+  opacity: 1;
+}

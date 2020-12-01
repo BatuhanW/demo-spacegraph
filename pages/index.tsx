@@ -1,48 +1,40 @@
-import { useEffect } from 'react';
-import { gql, useQuery } from '@apollo/client';
-import { Layout } from '../src/components';
+import { Layout, Button } from '../src/components';
 import style from '../styles/Home.module.css';
 
 export default function Home() {
-  const GET_SPACEX_DATA = gql`
-    query spacex {
-      missions {
-        description
-        id
-        manufacturers
-        name
-        wikipedia
-        website
-      }
-    }
-  `;
-
-  const { data, loading, error } = useQuery(GET_SPACEX_DATA);
-
-  useEffect(() => {
-    if (data) console.log('data:', data);
-  }, [data]);
-
-  useEffect(() => {
-    if (loading) console.log('loading...');
-  }, [loading]);
-
-  useEffect(() => {
-    if (error) console.error(error);
-  }, [error]);
-
   return (
     <Layout>
-      <div className={`${style.homeImage}`}>
+      <div className="absolute overflow-hidden right-0 hidden md:block">
         <div className={style.overlay} />
-        <div className={style.imageWrapper}>
-          <img className={style.image} src="spaceman.png" alt="astronaut" />
+        <div className="h-screen">
+          <img className="h-full" src="spaceman.png" alt="astronaut" />
         </div>
       </div>
-      {loading && <div>Loading...</div>}
-      <div className="h-full w-full relative flex justify-center pt-8">
-        <div>
-          <img src="/logo.svg" />
+      <div className="h-full w-full lg:pt-32 px-10 md:px-20 lg:px-40 xl:px-56 z-10">
+        <div className="tracking-widest mb-16">
+          <div className="md:w-3/5 text-3xl font-bold mb-5">
+            Space Exploration Technologies Corporation
+          </div>
+          <div className="md:w-1/2 text-lg leading-7">
+            SpaceX designs, manufactures and launches advanced rockets and
+            spacecraft. The company was founded in 2002 to revolutionize space
+            technology, with the ultimate goal of enabling people to live on
+            other planets.
+          </div>
+        </div>
+        <div className="flex gap-5">
+          <Button
+            text="MISSIONS"
+            onClick={() => {
+              console.log('missions');
+            }}
+          />
+          <Button
+            text="HISTORY"
+            onClick={() => {
+              console.log('missions');
+            }}
+          />
         </div>
       </div>
     </Layout>
