@@ -37,7 +37,7 @@ export default function Launches() {
                           Name
                         </th>
                         <th scope="col" className="px-6 py-3 font-medium ">
-                          Description
+                          Details
                         </th>
                         <th scope="col" className="px-6 py-3 font-medium ">
                           Location
