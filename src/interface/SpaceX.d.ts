@@ -1,8 +1,9 @@
-export declare module IMissions {
-  interface launch {
+export declare module ISpaceX {
+  interface Launch {
+    id: string;
     launch_date_unix: number;
     details: string;
-    mission_id: string;
+    mission_id: string[];
     mission_name: string;
     name: string;
     launch_success: boolean;
@@ -10,4 +11,6 @@ export declare module IMissions {
       site_name: string;
     };
   }
+
+  interface MissionDetails {}
 }

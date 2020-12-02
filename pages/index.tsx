@@ -1,3 +1,5 @@
+import { forwardRef } from 'react';
+import Link from 'next/link';
 import { Layout, Button } from '../src/components';
 import style from '../styles/Home.module.css';
 
@@ -23,18 +25,16 @@ export default function Home() {
           </div>
         </div>
         <div className="flex gap-5">
-          <Button
-            text="MISSIONS"
-            onClick={() => {
-              console.log('missions');
-            }}
-          />
-          <Button
-            text="HISTORY"
-            onClick={() => {
-              console.log('missions');
-            }}
-          />
+          <Link href="launches" as="launches">
+            <a>
+              <Button text="LAUNCHES" />
+            </a>
+          </Link>
+          <Link href="history" as="history">
+            <a>
+              <Button text="HISTORY" />
+            </a>
+          </Link>
         </div>
       </div>
     </Layout>
