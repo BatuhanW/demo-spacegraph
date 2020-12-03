@@ -7,6 +7,9 @@ export const GET_MISSION_DETAILS = gql`
       wikipedia
       website
       description
+      payloads {
+        nationality
+      }
     }
   }
 `;

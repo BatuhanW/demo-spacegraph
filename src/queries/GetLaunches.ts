@@ -9,6 +9,7 @@ export const GET_LAUNCHES = gql`
       mission_name
       launch_site {
         site_name
+        site_name_long
       }
       launch_success
       details

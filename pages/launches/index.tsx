@@ -54,7 +54,8 @@ export default function Launches() {
                       {data.launches.map(
                         (launch: ISpaceX.Launch, i: number) => {
                           const date = new Date(launch.launch_date_unix * 1000);
-                          const mid = launch.mission_id[0];
+                          const lid = launch.id;
+                          const mid = launch.mission_id;
 
                           return (
                             <tr key={`mission-row-${i + 1}`}>
@@ -66,10 +67,10 @@ export default function Launches() {
                                   {mid && (
                                     <div className="text-sm text-blue-300 underline">
                                       <Link
-                                        href={`/launches/missiondetails/${mid}`}
-                                        as={`/launches/missiondetails/${mid}`}
+                                        href={`/launches/missiondetails?mid=${mid}&lid=${lid}`}
+                                        as={`/launches/missiondetails?mid=${mid}&lid=${lid}`}
                                       >
-                                        mission details
+                                        see details
                                       </Link>
                                     </div>
                                   )}
