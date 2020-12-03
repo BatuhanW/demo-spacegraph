@@ -23,10 +23,16 @@ export default function Launches() {
   return (
     <Layout>
       <div className="w-full flex justify-center">
-        {loading && 'Loading...'}
+        {loading && <div className="text-gray-500 font-bold">LOADING</div>}
         {data && (
           // Tailwind CSS example table (modified)
           <div className="flex flex-col">
+            <div className="ml-8 mb-8 text-gray-500">
+              <Link as="/" href="/">
+                Home
+              </Link>
+              <span className="font-bold"> / Launches</span>
+            </div>
             <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
