@@ -30,11 +30,11 @@ export default function Home() {
               <Button text="LAUNCHES" />
             </a>
           </Link>
-          <Link href="history" as="history">
+          {/* <Link href="history" as="history">
             <a>
               <Button text="HISTORY" />
             </a>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </Layout>

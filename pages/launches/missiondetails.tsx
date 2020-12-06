@@ -33,7 +33,7 @@ export default function MissionDetails() {
                 </Link>
                 <span className="font-bold"> / Mission Details</span>
               </div>
-
+              {/*Tailwind CSS example card (modified)*/}
               <div className="bg-white shadow overflow-hidden sm:rounded-lg max-w-5xl">
                 <div className="px-4 py-5 sm:px-6">
                   <div className="flex justify-between">
