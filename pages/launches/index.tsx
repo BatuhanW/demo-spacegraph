@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useApolloClient, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { Layout } from '../../src/components';
 import { ISpaceX } from '../../src/interface/SpaceX';
 import { GET_LAUNCHES } from '../../src/queries';
@@ -14,8 +14,6 @@ export default function Launches() {
   const [launches, setLaunches] = useState<ISpaceX.Launch[]>([]);
   const [fetchedAll, setFetchedAll] = useState(false);
 
-  const client = useApolloClient();
-
   useEffect(() => {
     if (error) console.error(error);
   }, [error]);
@@ -23,7 +21,6 @@ export default function Launches() {
   useEffect(() => {
     if (data) {
       setLaunches(data.launches);
-      // client.writeQuery({ query: GET_LAUNCHES, data });
     }
   }, [data]);
 
